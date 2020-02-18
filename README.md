@@ -13,3 +13,7 @@
     
 ### Check output
     output.csv
+
+### Run script scarp_glassdoor.py
+    python scarp_glassdoor.py #Should be done under python2  
+
