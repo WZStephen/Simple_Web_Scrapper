@@ -29,15 +29,16 @@ companyName = "microsoft"
 companyURL = "https://www.glassdoor.com/Interview/Microsoft-Software-Development-Engineer-Interview-Questions-EI_IE1651.0,9_KO10,39.htm"
 
 def obj_dict(obj):
-	return obj.__dict__
-
+	#return obj.__dict__
+	return obj.decode('utf-8')
 def json_export(data):
 	jsonFile = open(companyName + ".json", "w")
 	jsonFile.write(json.dumps(data, indent=4, separators=(',', ': '), default=obj_dict))
 	jsonFile.close()
 
 def init_driver():
-	driver = webdriver.Chrome(executable_path = "chromedriver.exe")
+	#driver = webdriver.Chrome(executable_path = "chromedriver.exe") # Windows
+	driver = webdriver.Chrome(executable_path = "/Users/weichizhao/PycharmProjects/Simple_Web_Scrapper/chromedriver") # MacOS
 	driver.wait = WebDriverWait(driver, 10)
 	return driver
 
