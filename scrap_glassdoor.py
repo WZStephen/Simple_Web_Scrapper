@@ -23,7 +23,7 @@ username = "wzhao42@asu.edu" # your email here
 password = "choushabi123" # your password here
 
 # Manual options for the company, num pages to scrape, and URL
-pages = 1
+pages = 10
 companyName = "microsoft"
 companyURL = "https://www.glassdoor.com/Interview/Microsoft-Software-Development-Engineer-Interview-Questions-EI_IE1651.0,9_KO10,39.htm"
 
@@ -36,8 +36,8 @@ def json_export(data):
 	jsonFile.close()
 
 def init_driver():
-	driver = webdriver.Chrome(executable_path = "chromedriver.exe") # Windows
-	#driver = webdriver.Chrome(executable_path = "/Users/weichizhao/PycharmProjects/Simple_Web_Scrapper/chromedriver") # MacOS
+	#driver = webdriver.Chrome(executable_path = "chromedriver.exe") # Windows
+	driver = webdriver.Chrome(executable_path = "/Users/weichizhao/Projects/Simple_Web_Scrapper/chromedriver") # MacOS
 	driver.wait = WebDriverWait(driver, 10)
 	return driver
 
